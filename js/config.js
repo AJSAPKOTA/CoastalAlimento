@@ -1,48 +1,40 @@
 /**
  * THE COASTAL TABLE — Restaurant Configuration
  * =============================================
- * Edit this file to change hours, timezone, contact details,
- * and feature flags. All time-based behaviour reads from here.
+ * Edit hours, contact, Google link, and reviews here.
  */
 
 const restaurantConfig = {
   name: "The Coastal Table",
   tagline: "Fresh Food. Good Coffee. Made for Every Journey.",
 
-  // Timezone used for open/closed and menu periods (not the visitor's local time)
   timezone: "Australia/Hobart",
 
-  // Kitchen service hours (24-hour format)
   kitchen: {
     open: "06:00",
     close: "19:30"
   },
 
-  // Breakfast service window
   breakfast: {
     open: "09:00",
     close: "12:00"
   },
 
-  // Afternoon / main kitchen menu window
   afternoon: {
     open: "12:00",
     close: "19:30"
   },
 
-  // Cabinet & Café available during full kitchen hours
   cabinet: {
     open: "06:00",
     close: "19:30"
   },
 
-  // Desserts available from lunch onwards (configurable)
   dessert: {
     open: "12:00",
     close: "19:30"
   },
 
-  // Contact & location (fictional coastal Tasmanian location)
   contact: {
     address: "42 Marine Esplanade, Swansea TAS 7190",
     phone: "(03) 6257 8840",
@@ -50,15 +42,83 @@ const restaurantConfig = {
     parking: "Free street parking along Marine Esplanade and rear car park behind the building."
   },
 
-  // Map placeholder coordinates (Swansea, TAS area — fictional pin)
   map: {
     lat: -42.1234,
     lng: 148.0745,
-    // Google Maps directions URL (fictional address encoded)
     directionsUrl: "https://www.google.com/maps/search/?api=1&query=Marine+Esplanade+Swansea+TAS+7190"
   },
 
-  // Ordering
+  // Your Google reviews / business link (Alimento Swansea)
+  googleReviewsUrl:
+    "https://www.google.com/search?q=alimento+swansea#lrd=0xaa71790018cbf9b3:0x334a38376fb93cab,1,,,,",
+
+  /**
+   * 5-star reviews only (public Google / Tripadvisor quotes for Alimento Swansea).
+   * Only rating: 5 displays. Page load shuffles randomly.
+   */
+  reviews: [
+    {
+      rating: 5,
+      text: "Absolutely delicious joint. We went here on our way to Hobart and what a hidden gem. The bacon breakfast was absolutely stunning — must visit!",
+      author: "Emily L.",
+      date: "Google"
+    },
+    {
+      rating: 5,
+      text: "Had a fantastic dining experience. The atmosphere is warm, welcoming and relaxing, with great music that perfectly complements the beautiful coastal setting.",
+      author: "Lailani C.",
+      date: "Google"
+    },
+    {
+      rating: 5,
+      text: "Been here a few times and it's always been great. Easy parking, very friendly staff, reasonably priced. Fast cabinet food or order from the menu — the veggie focaccia was tops.",
+      author: "J.",
+      date: "Google"
+    },
+    {
+      rating: 5,
+      text: "Beautiful decor! Love the way the place looks — so inviting. Great atmosphere to relax and enjoy. 5 stars for the decor alone, and delicious eats.",
+      author: "Rajashree P.",
+      date: "Google"
+    },
+    {
+      rating: 5,
+      text: "The food is absolutely delicious — the best I've had in Tassie so far. Staff are very friendly.",
+      author: "Rhain B.",
+      date: "Google"
+    },
+    {
+      rating: 5,
+      text: "OMG the FOOD! Walked in with no expectations — WOW. Decor, atmosphere, service and the seafood pasta and butter chicken were incredible. Great value.",
+      author: "Donna V.",
+      date: "Tripadvisor"
+    },
+    {
+      rating: 5,
+      text: "Best food on the island. Amazing ribs with fresh salad and awesome potatoes. Super friendly staff and manager.",
+      author: "Robert R.",
+      date: "Tripadvisor"
+    },
+    {
+      rating: 5,
+      text: "We love this place! The food is superb and well-priced. A real favourite when we're on the east coast.",
+      author: "Catriona H.",
+      date: "Tripadvisor"
+    },
+    {
+      rating: 5,
+      text: "Sensational dinner — went looking for food and it was a real surprise. Great chefs and the deli looked amazing. Thanks team!",
+      author: "David W.",
+      date: "Tripadvisor"
+    },
+    {
+      rating: 5,
+      text: "This bakery is a must! Fresh croissant with leg ham and cheese, chicken wrap, and carrot cakes — everything delicious and freshly made.",
+      author: "Sandra W.",
+      date: "Tripadvisor"
+    }
+  ],
+
   ordering: {
     minOrder: 0,
     currency: "AUD",
@@ -67,27 +127,17 @@ const restaurantConfig = {
     estimatedPrepMessage: "Estimated preparation shown per item. Total time calculated at checkout."
   },
 
-  // Feature flags for prototype
   features: {
-    showTestingPanel: true,   // Set false for production / GitHub Pages public view
+    showTestingPanel: true,
     enableOrderStatus: true,
     enableLocalStorageOrders: true
   },
 
-  // Testing overrides — used only when testing panel is active
-  // Leave null to use real restaurant time
   testing: {
-    forcedTime: null  // e.g. "10:00", "14:00", "20:00" — set via testing panel
+    forcedTime: null
   }
-    reviews: [
-  {
-    rating: 5
-  }
-]
-  googleReviewsUrl: "https://www.google.com/search?q=alimento+swansea&rlz=1C1CHBF_en-GBAU918AU918&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIJCAAQRRg7GIAEMgYIARBFGDsyBggCEEUYOTIHCAMQABiABDIKCAQQABixAxiABDIHCAUQABiABDIKCAYQABixAxiABDIGCAcQRRg80gEINTYzOGowajSoAgCwAgE&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0xaa71790018cbf9b3:0x334a38376fb93cab,1,,,,",
 };
 
-// Export for modules / global use
 if (typeof window !== "undefined") {
   window.restaurantConfig = restaurantConfig;
 }
