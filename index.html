@@ -326,13 +326,28 @@
       </div>
     </section>
 
-    <!-- Reviews placeholder -->
-    <section class="section">
+    <!-- Google-style rolling reviews -->
+    <section class="section section-reviews" id="reviews">
       <div class="container">
         <h2 class="section-title">What People Say</h2>
-        <div class="reviews-placeholder">
-          <p>Customer reviews will appear here once connected to a real review source.</p>
-          <p style="margin:0;font-size:0.9rem">We don't display fabricated ratings or testimonials.</p>
+        <p class="section-lead">Top-rated guest feedback — edit these in <code>js/config.js</code> with your real Google review quotes.</p>
+
+        <div class="reviews-marquee" aria-label="Customer reviews">
+          <div class="reviews-track" id="reviews-track">
+            <!-- Filled by app.js from restaurantConfig.reviews -->
+          </div>
+        </div>
+
+        <div class="reviews-footer-cta">
+          <a
+            id="google-reviews-link"
+            class="btn btn-primary"
+            href="https://www.google.com/maps/search/?api=1&query=The+Coastal+Table+Swansea+TAS"
+            target="_blank"
+            rel="noopener noreferrer">
+            View all on Google
+          </a>
+          <p class="reviews-caption">Opens Google Maps · Paste your real reviews link in config.js</p>
         </div>
       </div>
     </section>
