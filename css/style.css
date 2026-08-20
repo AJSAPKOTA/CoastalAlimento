@@ -98,15 +98,17 @@ button, input, textarea, select { font: inherit; }
   border: 0;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header / Navigation ---------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 243, 235, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-border);
+  background: rgba(252, 249, 244, 0.92);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  border-bottom: 1px solid rgba(224, 216, 204, 0.85);
   height: var(--header-h);
+  box-shadow: 0 1px 0 rgba(28, 28, 28, 0.04);
 }
 .header-inner {
   display: flex;
@@ -115,112 +117,188 @@ button, input, textarea, select { font: inherit; }
   height: var(--header-h);
   gap: var(--space-md);
 }
+
+/* Logo */
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-charcoal);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  transition: opacity var(--transition);
 }
-.logo span { color: var(--color-ocean); }
+.logo:hover { opacity: 0.85; color: var(--color-charcoal); }
+.logo span {
+  color: var(--color-ocean);
+  font-style: italic;
+  font-weight: 700;
+}
 
+/* Desktop nav links */
 .main-nav {
   display: none;
-  gap: var(--space-lg);
+  gap: 0.15rem;
   align-items: center;
 }
 .main-nav a {
+  position: relative;
   text-decoration: none;
   color: var(--color-charcoal-soft);
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease;
 }
-.main-nav a:hover,
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.2rem;
+  height: 2px;
+  background: var(--color-terracotta);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.22s ease;
+}
+.main-nav a:hover {
+  color: var(--color-charcoal);
+  background: rgba(28, 28, 28, 0.04);
+}
+.main-nav a:hover::after,
+.main-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
 .main-nav a[aria-current="page"] {
   color: var(--color-charcoal);
-}
-.main-nav a[aria-current="page"] {
-  box-shadow: inset 0 -2px 0 var(--color-terracotta);
+  font-weight: 700;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 0.65rem;
 }
+
+/* Primary Order CTA in header */
 .btn-order-header {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  background: var(--color-charcoal);
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #1c1c1c 0%, #2c4344 100%);
   color: var(--color-cream);
   border: none;
-  padding: 0.55rem 1rem;
+  padding: 0.6rem 1.15rem;
   border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
   text-decoration: none;
   cursor: pointer;
-  transition: background var(--transition);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 2px 10px rgba(28, 28, 28, 0.18);
 }
 .btn-order-header:hover {
-  background: var(--color-ocean-deep);
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(28, 28, 28, 0.22);
   color: var(--color-cream);
+}
+.btn-order-header:active {
+  transform: translateY(0);
 }
 .cart-badge {
   background: var(--color-terracotta);
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  min-width: 1.25rem;
-  height: 1.25rem;
+  min-width: 1.2rem;
+  height: 1.2rem;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0 0.3rem;
+  box-shadow: 0 0 0 2px rgba(28, 28, 28, 0.35);
 }
 .cart-badge[hidden] { display: none; }
 
+/* Hamburger */
 .nav-toggle {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
-  background: none;
-  border: none;
-  padding: 0.5rem;
+  background: rgba(28, 28, 28, 0.05);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.55rem 0.6rem;
   cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.nav-toggle:hover {
+  background: rgba(28, 28, 28, 0.08);
+  border-color: var(--color-border);
 }
 .nav-toggle span {
   display: block;
-  width: 22px;
+  width: 20px;
   height: 2px;
   background: var(--color-charcoal);
-  transition: var(--transition);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile nav open */
+/* Mobile nav drawer */
 @media (max-width: 899px) {
   .main-nav {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     position: fixed;
     inset: var(--header-h) 0 auto 0;
-    background: var(--color-cream);
-    padding: var(--space-xl);
+    background: rgba(252, 249, 244, 0.98);
+    backdrop-filter: blur(16px);
+    padding: var(--space-lg) var(--space-xl) var(--space-xl);
     border-bottom: 1px solid var(--color-border);
-    transform: translateY(-120%);
+    box-shadow: 0 12px 40px rgba(28, 28, 28, 0.1);
+    transform: translateY(-110%);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-    gap: var(--space-md);
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    gap: 0.25rem;
   }
   .main-nav.open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+  }
+  .main-nav a {
+    font-size: 1.05rem;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+  }
+  .main-nav a::after { display: none; }
+  .main-nav a[aria-current="page"] {
+    background: rgba(61, 90, 91, 0.1);
+    color: var(--color-ocean-deep);
   }
   body.nav-open { overflow: hidden; }
 }
