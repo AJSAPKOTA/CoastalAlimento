@@ -79,6 +79,12 @@ const restaurantConfig = {
   testing: {
     forcedTime: null  // e.g. "10:00", "14:00", "20:00" — set via testing panel
   }
+    reviews: [
+  {
+    rating: 5
+  }
+]
+  googleReviewsUrl: "https://www.google.com/search?q=alimento+swansea&rlz=1C1CHBF_en-GBAU918AU918&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIJCAAQRRg7GIAEMgYIARBFGDsyBggCEEUYOTIHCAMQABiABDIKCAQQABixAxiABDIHCAUQABiABDIKCAYQABixAxiABDIGCAcQRRg80gEINTYzOGowajSoAgCwAgE&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0xaa71790018cbf9b3:0x334a38376fb93cab,1,,,,",
 };
 
 // Export for modules / global use
