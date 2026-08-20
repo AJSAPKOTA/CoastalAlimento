@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Owner Admin | The Coastal Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">The Coastal <span>Table</span></a>
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-secondary btn-small">View site</a>
+        <button type="button" class="btn btn-small" id="btn-logout" hidden>Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login -->
+  <main id="admin-login" class="section">
+    <div class="container" style="max-width:400px">
+      <h1>Owner Admin</h1>
+      <p class="section-lead">Update dishes, today’s specials and food photos. Default password is in the README (change it in <code>js/admin.js</code>).</p>
+      <form id="login-form" class="admin-login-box">
+        <label for="admin-password">Password</label>
+        <input type="password" id="admin-password" required autocomplete="current-password" placeholder="Enter admin password">
+        <p id="login-error" class="login-error" hidden></p>
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:1rem">Log in</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- App -->
+  <main id="admin-app" class="section" hidden>
+    <div class="container admin-wrap">
+      <h1>Menu Admin</h1>
+      <div id="admin-status" class="admin-banner"></div>
+
+      <div class="admin-actions">
+        <button type="button" class="btn btn-primary" id="btn-add-dish">+ Add dish</button>
+        <button type="button" class="btn btn-secondary" id="btn-save-preview">Save preview</button>
+        <button type="button" class="btn btn-primary" id="btn-download-json">Download menu.json</button>
+        <button type="button" class="btn btn-secondary" id="btn-clear-preview">Clear preview</button>
+      </div>
+
+      <div class="admin-help">
+        <strong>How to publish for everyone:</strong>
+        <ol>
+          <li>Add or edit dishes (and set image path or full image URL)</li>
+          <li>Click <strong>Save preview</strong> to test on this browser</li>
+          <li>Click <strong>Download menu.json</strong></li>
+          <li>On GitHub: open <code>data/menu.json</code> → replace file with your download → Commit</li>
+          <li>For new photos: upload JPG/WebP into <code>images/…</code> <em>or</em> paste a public image URL in the Image field</li>
+        </ol>
+      </div>
+
+      <!-- Form panel -->
+      <div id="form-panel" class="form-panel" hidden>
+        <h2 id="form-title">Add new dish</h2>
+        <form id="dish-form" class="dish-form-grid">
+          <div class="form-group">
+            <label for="dish-name">Name *</label>
+            <input type="text" id="dish-name" required placeholder="e.g. Margherita Pizza">
+          </div>
+          <div class="form-group">
+            <label for="dish-category">Category *</label>
+            <select id="dish-category">
+              <option value="cabinet">Cabinet</option>
+              <option value="coffee">Coffee</option>
+              <option value="tea">Tea</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="dessert">Dessert</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dish-price">Price (AUD) *</label>
+            <input type="number" id="dish-price" step="0.01" min="0" required placeholder="22.00">
+          </div>
+          <div class="form-group">
+            <label for="dish-prep">Prep time (minutes)</label>
+            <input type="number" id="dish-prep" min="0" value="10">
+          </div>
+          <div class="form-group full">
+            <label for="dish-description">Description</label>
+            <textarea id="dish-description" rows="2" placeholder="Short customer-facing description"></textarea>
+          </div>
+          <div class="form-group full">
+            <label for="dish-image">Image path or URL</label>
+            <input type="text" id="dish-image" placeholder="images/afternoon/my-dish.jpg  or  https://…">
+            <p class="form-hint">Local path after uploading to the repo, or any public image URL (Imgur, etc.).</p>
+            <img id="image-preview" class="image-preview" alt="Preview" hidden>
+          </div>
+          <div class="form-group">
+            <label for="dish-dietary">Dietary (comma-separated)</label>
+            <input type="text" id="dish-dietary" placeholder="vegetarian, gluten-free">
+          </div>
+          <div class="form-group">
+            <label for="dish-tags">Tags (comma-separated)</label>
+            <input type="text" id="dish-tags" placeholder="grab-and-go, house-favourite, this-week">
+          </div>
+          <div class="form-group checks full">
+            <label class="toggle"><input type="checkbox" id="dish-available" checked> Available</label>
+            <label class="toggle"><input type="checkbox" id="dish-special"> Today’s special</label>
+            <label class="toggle"><input type="checkbox" id="dish-featured"> House favourite</label>
+            <label class="toggle"><input type="checkbox" id="dish-ready"> Ready now</label>
+          </div>
+          <div class="form-group full form-actions">
+            <button type="submit" class="btn btn-primary">Save dish</button>
+            <button type="button" class="btn btn-secondary" id="btn-cancel-form">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-bar admin-filters">
+        <button type="button" data-admin-filter="all" class="active">All</button>
+        <button type="button" data-admin-filter="specials">Specials</button>
+        <button type="button" data-admin-filter="featured">Favourites</button>
+        <button type="button" data-admin-filter="cabinet">Cabinet</button>
+        <button type="button" data-admin-filter="breakfast">Breakfast</button>
+        <button type="button" data-admin-filter="afternoon">Afternoon</button>
+        <button type="button" data-admin-filter="dessert">Desserts</button>
+        <button type="button" data-admin-filter="coffee">Coffee</button>
+        <button type="button" data-admin-filter="tea">Tea</button>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Dish</th>
+              <th>Price</th>
+              <th>Prep</th>
+              <th>Available</th>
+              <th>Special</th>
+              <th>Favourite</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="admin-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-loader.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    document.getElementById("btn-logout").hidden = sessionStorage.getItem("coastalTable_admin_ok") !== "1";
+  </script>
+</body>
+</html>

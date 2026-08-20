@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | The Coastal Table</title>
+  <meta name="description" content="Breakfast, afternoon menu, cabinet food, coffee, tea and desserts at The Coastal Table, Swansea TAS.">
+  <meta property="og:title" content="Menu | The Coastal Table">
+  <meta property="og:description" content="Full menu — cabinet, breakfast, afternoon, desserts, coffee and tea.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="menu">
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">The Coastal <span>Table</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="menu.html" aria-current="page">Menu</a>
+        <a href="index.html#specials">Today's Specials</a>
+        <a href="order.html">Order</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="order.html" class="btn-order-header">
+          Order Online
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="status-banner" id="status-banner">
+    <div class="container">
+      <p class="status-label" id="status-label">OPEN NOW</p>
+      <p class="status-detail" id="status-detail"></p>
+      <p class="current-service" id="current-service"></p>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Menu</h1>
+      <p>Cabinet, breakfast, afternoon, desserts, coffee and tea. Availability follows kitchen hours.</p>
+    </div>
+  </section>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="filter-bar" role="group" aria-label="Filter menu by category">
+        <button type="button" data-filter="all" class="active" aria-pressed="true">All</button>
+        <button type="button" data-filter="cabinet" aria-pressed="false">Cabinet</button>
+        <button type="button" data-filter="coffee" aria-pressed="false">Coffee</button>
+        <button type="button" data-filter="tea" aria-pressed="false">Tea</button>
+        <button type="button" data-filter="breakfast" aria-pressed="false">Breakfast</button>
+        <button type="button" data-filter="afternoon" aria-pressed="false">Afternoon</button>
+        <button type="button" data-filter="dessert" aria-pressed="false">Desserts</button>
+      </div>
+      <div class="dish-grid" id="menu-grid"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>The Coastal Table</h3>
+          <p style="margin:0;font-size:0.95rem">Fresh Food. Good Coffee. Made for Every Journey.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Visit</h3>
+          <ul class="footer-links">
+            <li>Kitchen 6:00 AM – 7:30 PM</li>
+            <li><a href="tel:+61362578840">(03) 6257 8840</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© The Coastal Table — Prototype</span>
+        <span>Pay at counter</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-order-bar" id="sticky-order-bar" role="button" tabindex="0" aria-label="View your order">
+    <span class="sticky-label">View order (<span class="sticky-count">0</span>)</span>
+    <span class="sticky-total">$0.00</span>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-loader.js"></script>
+  <script src="js/ordering.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

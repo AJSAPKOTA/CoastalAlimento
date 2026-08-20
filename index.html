@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Coastal Table | Breakfast, Coffee &amp; Afternoon Dining</title>
+  <meta name="description" content="Fresh food, cabinet café, coffee and afternoon dining for locals and travellers. Order ahead and pay at the counter. Swansea, Tasmania.">
+  <meta property="og:title" content="The Coastal Table | Breakfast, Coffee &amp; Afternoon Dining">
+  <meta property="og:description" content="Fresh Food. Good Coffee. Made for Every Journey. Order ahead — pay at the counter.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "The Coastal Table",
+    "description": "Fresh food, cabinet café, coffee and afternoon dining for locals and travellers.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "42 Marine Esplanade",
+      "addressLocality": "Swansea",
+      "addressRegion": "TAS",
+      "postalCode": "7190",
+      "addressCountry": "AU"
+    },
+    "telephone": "(03) 6257 8840",
+    "servesCuisine": ["Café", "Australian", "Breakfast", "Modern Australian"],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "06:00",
+      "closes": "19:30"
+    },
+    "acceptsReservations": "False"
+  }
+  </script>
+</head>
+<body data-page="home">
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">The Coastal <span>Table</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#specials">Today's Specials</a>
+        <a href="order.html">Order</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="order.html" class="btn-order-header">
+          Order Online
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="status-banner" id="status-banner">
+    <div class="container">
+      <p class="status-label" id="status-label">OPEN NOW</p>
+      <p class="status-detail" id="status-detail"></p>
+      <p class="current-service" id="current-service"></p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Hero — time-based coastal imagery -->
+    <section class="hero" id="hero" aria-label="Welcome">
+      <div class="hero-bg" id="hero-bg" role="img" aria-label="Coastal café atmosphere"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow" id="hero-eyebrow">East coast · Swansea, Tasmania</p>
+        <h1>The Coastal Table</h1>
+        <p class="hero-tagline">Fresh Food. Good Coffee. Made for Every Journey.</p>
+        <p class="hero-mood" id="hero-mood"></p>
+        <div class="hero-cta">
+          <a href="order.html" class="btn btn-primary btn-lg">Order Ahead — Pay at Counter</a>
+          <a href="#specials" class="btn btn-secondary btn-lg">Today's Specials</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mood strip — visual hooks -->
+    <section class="mood-strip" aria-label="Why stop here">
+      <div class="mood-card" style="--mood-img:url('images/atmosphere/coffee-steam.jpg')">
+        <div class="mood-card-inner">
+          <span class="mood-icon" aria-hidden="true">☕</span>
+          <h3>Coffee worth the stop</h3>
+          <p>Freshly pulled shots, creamy flat whites</p>
+        </div>
+      </div>
+      <div class="mood-card" style="--mood-img:url('images/atmosphere/fresh-food-spread.jpg')">
+        <div class="mood-card-inner">
+          <span class="mood-icon" aria-hidden="true">🥐</span>
+          <h3>Ready when you are</h3>
+          <p>Cabinet food &amp; grab-and-go for travellers</p>
+        </div>
+      </div>
+      <div class="mood-card" style="--mood-img:url('images/atmosphere/brunch-table.jpg')">
+        <div class="mood-card-inner">
+          <span class="mood-icon" aria-hidden="true">🍳</span>
+          <h3>Kitchen cooked fresh</h3>
+          <p>Breakfast &amp; afternoon plates to order</p>
+        </div>
+      </div>
+      <div class="mood-card" style="--mood-img:url('images/atmosphere/coastal-beach.jpg')">
+        <div class="mood-card-inner">
+          <span class="mood-icon" aria-hidden="true">🌊</span>
+          <h3>Right by the coast</h3>
+          <p>Easy parking on Marine Esplanade</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Today's Specials -->
+    <section class="section section-specials" id="specials">
+      <div class="container">
+        <h2 class="section-title">⭐ Today's Specials</h2>
+        <p class="section-lead">The plates people drive for — order ahead and collect at the counter.</p>
+        <div class="dish-grid specials" id="specials-grid"></div>
+      </div>
+    </section>
+
+    <!-- Quick Grab & Go -->
+    <section class="section section-grab" id="grab">
+      <div class="container">
+        <h2 class="section-title">⚡ Quick Grab &amp; Go</h2>
+        <p class="section-lead">Ready-to-eat cabinet food, coffee and tea for travellers and anyone short on time.</p>
+        <div class="dish-grid" id="grab-grid"></div>
+      </div>
+    </section>
+
+    <!-- Cabinet & Café -->
+    <section class="section section-cabinet" id="section-cabinet">
+      <div class="container">
+        <h2 class="section-title">☕ Cabinet &amp; Café</h2>
+        <p class="section-lead">Fresh cabinet food, coffee and tea throughout the day.</p>
+        <div class="dish-grid" id="cabinet-grid"></div>
+        <p style="margin-top:1.5rem;text-align:center">
+          <a href="menu.html" class="btn btn-secondary">Full Cabinet &amp; Drinks Menu</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Current Kitchen Menu -->
+    <section class="section" id="section-kitchen">
+      <div class="container">
+        <h2 class="section-title" id="kitchen-title">🍳 Kitchen Menu</h2>
+        <p class="section-lead">Prepared to order. Check preparation times when you add items.</p>
+        <div class="dish-grid" id="kitchen-grid"></div>
+        <p style="margin-top:1.5rem;text-align:center">
+          <a href="menu.html" class="btn btn-secondary">View Full Menu</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Desserts -->
+    <section class="section" id="section-desserts" hidden>
+      <div class="container">
+        <h2 class="section-title">🍰 Desserts</h2>
+        <p class="section-lead">House-made sweets to finish your meal.</p>
+        <div class="dish-grid" id="dessert-grid"></div>
+      </div>
+    </section>
+
+    <!-- Local Favourites -->
+    <section class="section" id="favourites">
+      <div class="container">
+        <h2 class="section-title">❤️ Local Favourites</h2>
+        <p class="section-lead">House favourites and featured dishes. Real popularity data will replace these labels when available.</p>
+        <div class="dish-grid" id="favourites-grid"></div>
+      </div>
+    </section>
+
+    <!-- This Week -->
+    <section class="section" style="background:var(--color-white)">
+      <div class="container">
+        <h2 class="section-title">📅 This Week</h2>
+        <p class="section-lead">Rotating specials — drop in to see what's new.</p>
+        <div class="dish-grid" id="this-week-grid"></div>
+      </div>
+    </section>
+
+    <!-- Traveller & Local experience -->
+    <section class="section">
+      <div class="container">
+        <div class="experience-grid">
+          <div class="experience-card" id="travelling">
+            <h3>🚗 Travelling Through?</h3>
+            <p>Need something quick? Order ahead, arrive, pay at the counter and collect.</p>
+            <ul>
+              <li>Ready-to-eat cabinet food</li>
+              <li>Coffee &amp; tea</li>
+              <li>Quick kitchen dishes</li>
+              <li>Clear directions &amp; parking</li>
+            </ul>
+            <div class="journey-steps">
+              <span>Order ahead</span>
+              <span>Arrive</span>
+              <span>Pay at Counter</span>
+              <span>Collect</span>
+            </div>
+            <p style="margin-top:1.25rem">
+              <a href="order.html" class="btn btn-primary">Order Now</a>
+              <a href="location.html" class="btn btn-secondary" style="margin-left:0.5rem">Directions</a>
+            </p>
+          </div>
+          <div class="experience-card">
+            <h3>❤️ For Locals</h3>
+            <p>Today's specials, house favourites and rotating weekly dishes. Fresh cabinet food and coffee every day.</p>
+            <ul>
+              <li>Today's specials</li>
+              <li>House favourites</li>
+              <li>Weekly rotating dishes</li>
+              <li>Cabinet &amp; café all day</li>
+            </ul>
+            <p style="margin-top:1.25rem">
+              <a href="#specials" class="btn btn-primary">See Today's Specials</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local & Fresh -->
+    <section class="section" style="background:var(--color-white)">
+      <div class="container">
+        <h2 class="section-title">🌿 Local &amp; Fresh</h2>
+        <p class="section-lead">Genuine claims about how we prepare and source.</p>
+        <div class="local-fresh">
+          <div class="local-item">
+            <span class="local-icon" aria-hidden="true">🍳</span>
+            <div>
+              <strong>Freshly prepared</strong>
+              <p style="margin:0;color:var(--color-muted);font-size:0.9rem">Kitchen dishes cooked to order. Cabinet food prepared daily.</p>
+            </div>
+          </div>
+          <div class="local-item">
+            <span class="local-icon" aria-hidden="true">☕</span>
+            <div>
+              <strong>House coffee &amp; tea</strong>
+              <p style="margin:0;color:var(--color-muted);font-size:0.9rem">Quality coffee and a full range of teas, made to order.</p>
+            </div>
+          </div>
+          <div class="local-item">
+            <span class="local-icon" aria-hidden="true">🥖</span>
+            <div>
+              <strong>Cabinet ready</strong>
+              <p style="margin:0;color:var(--color-muted);font-size:0.9rem">Rolls, pastries, sandwiches and cakes available throughout service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Stop Here — full-bleed coastal photo band -->
+    <section class="section section-why section-why-photo">
+      <div class="why-bg" aria-hidden="true"></div>
+      <div class="container why-content">
+        <h2 class="section-title">Why Stop Here?</h2>
+        <p class="section-lead">Four reasons travellers pull in — and locals come back.</p>
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>☕ Fresh Coffee</h3>
+            <p>Steaming cups, proper milk texture, made to order.</p>
+          </div>
+          <div class="why-card">
+            <h3>🥐 Ready-to-Go Food</h3>
+            <p>Cabinet filled daily — ideal when you only have ten minutes.</p>
+          </div>
+          <div class="why-card">
+            <h3>🍳 Fresh Kitchen Food</h3>
+            <p>Breakfast and afternoon dishes cooked when you order.</p>
+          </div>
+          <div class="why-card">
+            <h3>📍 Easy to Find</h3>
+            <p>Marine Esplanade, Swansea — free parking out front and behind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location teaser — live map -->
+    <section class="section section-location" id="location-teaser">
+      <div class="container">
+        <h2 class="section-title">📍 Find Us</h2>
+        <p class="section-lead">42 Marine Esplanade, Swansea TAS 7190 — pull in, order, collect.</p>
+        <div class="map-embed-wrap">
+          <iframe
+            class="map-embed"
+            title="Map of Swansea, Tasmania — The Coastal Table area"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Marine+Esplanade+Swansea+TAS+7190&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen></iframe>
+        </div>
+        <p style="text-align:center;margin-top:1rem">
+          <a href="https://www.google.com/maps/search/?api=1&query=Marine+Esplanade+Swansea+TAS+7190"
+             class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          <a href="location.html" class="btn btn-secondary" style="margin-left:0.5rem">Hours &amp; parking</a>
+        </p>
+        <div class="location-details">
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+61362578840">(03) 6257 8840</a></dd>
+            <dt>Parking</dt>
+            <dd>Free street parking and rear car park</dd>
+          </div>
+          <div>
+            <dt>Kitchen Hours</dt>
+            <dd>
+              <ul class="hours-list" id="hours-list"></ul>
+            </dd>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews placeholder -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What People Say</h2>
+        <div class="reviews-placeholder">
+          <p>Customer reviews will appear here once connected to a real review source.</p>
+          <p style="margin:0;font-size:0.9rem">We don't display fabricated ratings or testimonials.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>The Coastal Table</h3>
+          <p style="margin:0;font-size:0.95rem">Fresh Food. Good Coffee. Made for Every Journey.</p>
+          <p style="margin:0.75rem 0 0;font-size:0.9rem">42 Marine Esplanade, Swansea TAS 7190</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admin.html">Owner Admin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Visit</h3>
+          <ul class="footer-links">
+            <li>Kitchen 6:00 AM – 7:30 PM</li>
+            <li><a href="tel:+61362578840">(03) 6257 8840</a></li>
+            <li>Pay at counter · Collect in store</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© The Coastal Table — Prototype for demonstration</span>
+        <span>No online payment · Order ahead &amp; pay at counter</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-order-bar" id="sticky-order-bar" role="button" tabindex="0" aria-label="View your order">
+    <span class="sticky-label">View order (<span class="sticky-count">0</span>)</span>
+    <span class="sticky-total">$0.00</span>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-loader.js"></script>
+  <script src="js/ordering.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

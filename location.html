@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Location &amp; Hours | The Coastal Table</title>
+  <meta name="description" content="Find The Coastal Table at 42 Marine Esplanade, Swansea TAS. Kitchen hours, parking and directions.">
+  <meta property="og:title" content="Location &amp; Hours | The Coastal Table">
+  <meta property="og:description" content="42 Marine Esplanade, Swansea TAS 7190. Kitchen 6:00 AM – 7:30 PM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="location">
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">The Coastal <span>Table</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#specials">Today's Specials</a>
+        <a href="order.html">Order</a>
+        <a href="location.html" aria-current="page">Location</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="order.html" class="btn-order-header">
+          Order Online
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="status-banner" id="status-banner">
+    <div class="container">
+      <p class="status-label" id="status-label">OPEN NOW</p>
+      <p class="status-detail" id="status-detail"></p>
+      <p class="current-service" id="current-service"></p>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>📍 Find Us</h1>
+      <p>42 Marine Esplanade, Swansea TAS 7190</p>
+    </div>
+  </section>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="map-embed-wrap">
+        <iframe
+          class="map-embed"
+          title="Map of Marine Esplanade, Swansea Tasmania"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Marine+Esplanade+Swansea+TAS+7190&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center;margin:1rem 0 1.5rem">
+        <a href="https://www.google.com/maps/search/?api=1&query=Marine+Esplanade+Swansea+TAS+7190"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">Get Directions in Google Maps</a>
+      </p>
+
+      <div class="location-details" style="margin-top:2rem">
+        <div>
+          <dl>
+            <dt>Address</dt>
+            <dd>42 Marine Esplanade<br>Swansea TAS 7190</dd>
+            <dt>Phone</dt>
+            <dd><a href="tel:+61362578840">(03) 6257 8840</a></dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:hello@thecoastaltable.com.au">hello@thecoastaltable.com.au</a></dd>
+          </dl>
+        </div>
+        <div>
+          <dl>
+            <dt>Parking</dt>
+            <dd>Free street parking along Marine Esplanade and a rear car park behind the building.</dd>
+            <dt>Collection</dt>
+            <dd>Orders are collected at the restaurant counter. Pay when you collect — no online payment.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top:2.5rem">Opening Hours</h2>
+      <ul class="hours-list" id="hours-list" style="max-width:28rem">
+        <!-- Filled by app.js -->
+      </ul>
+      <p style="color:var(--color-muted);font-size:0.9rem;margin-top:1rem">
+        Hours are in Australia/Hobart time. The open/closed status on this site uses the restaurant timezone, not your device's local time.
+      </p>
+
+      <div style="margin-top:2.5rem;padding:1.5rem;background:var(--color-white);border-radius:var(--radius-lg);box-shadow:var(--shadow)">
+        <h3 style="margin-top:0">🚗 Travelling through?</h3>
+        <p>Order ahead on your way, park easily, pay at the counter and collect. Ideal for a short stop.</p>
+        <a href="order.html" class="btn btn-primary">Order Ahead</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>The Coastal Table</h3>
+          <p style="margin:0;font-size:0.95rem">42 Marine Esplanade, Swansea TAS 7190</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-links">
+            <li><a href="tel:+61362578840">(03) 6257 8840</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© The Coastal Table — Prototype</span>
+        <span>Fictional location for demonstration</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-order-bar" id="sticky-order-bar" role="button" tabindex="0" aria-label="View your order">
+    <span class="sticky-label">View order (<span class="sticky-count">0</span>)</span>
+    <span class="sticky-total">$0.00</span>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-loader.js"></script>
+  <script src="js/ordering.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.App) App.renderHours();
+    });
+  </script>
+</body>
+</html>

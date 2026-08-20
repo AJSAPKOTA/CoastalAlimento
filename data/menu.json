@@ -1,0 +1,782 @@
+[
+  {
+    "id": 101,
+    "name": "Ham & Cheese Croissant",
+    "category": "cabinet",
+    "price": 9.5,
+    "description": "Flaky butter croissant filled with smoked ham and melted cheddar.",
+    "image": "images/cabinet/ham-cheese-croissant.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Chicken Pesto Pita",
+    "category": "cabinet",
+    "price": 12.9,
+    "description": "Warm pita, free-range chicken, house pesto, rocket and roasted capsicum.",
+    "image": "images/cabinet/chicken-pesto-pita.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Sourdough with Butter & Jam",
+    "category": "cabinet",
+    "price": 6.5,
+    "description": "Thick-cut house sourdough, cultured butter and local berry jam.",
+    "image": "images/cabinet/sourdough-butter-jam.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Bacon & Egg Roll",
+    "category": "cabinet",
+    "price": 11.5,
+    "description": "Crispy bacon, fried free-range egg, cheddar and house sauce on a soft roll.",
+    "image": "images/cabinet/bacon-egg-roll.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Smoked Salmon Bagel",
+    "category": "cabinet",
+    "price": 14.5,
+    "description": "Toasted bagel, cream cheese, smoked salmon, dill and capers.",
+    "image": "images/cabinet/smoked-salmon-bagel.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Vegetable Frittata Slice",
+    "category": "cabinet",
+    "price": 8.9,
+    "description": "Egg, seasonal vegetables, herbs and feta. Served warm from the cabinet.",
+    "image": "images/cabinet/vegetable-frittata.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Banana Bread",
+    "category": "cabinet",
+    "price": 6.5,
+    "description": "Moist house banana bread with walnuts. Perfect with coffee.",
+    "image": "images/cabinet/banana-bread.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Blueberry Muffin",
+    "category": "cabinet",
+    "price": 5.9,
+    "description": "Buttery muffin studded with fresh blueberries.",
+    "image": "images/cabinet/blueberry-muffin.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Caramel Slice",
+    "category": "cabinet",
+    "price": 5.5,
+    "description": "Classic layered caramel slice with chocolate topping.",
+    "image": "images/cabinet/caramel-slice.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Raspberry Lamington",
+    "category": "cabinet",
+    "price": 5.5,
+    "description": "Soft sponge, raspberry jam, chocolate and coconut.",
+    "image": "images/cabinet/raspberry-lamington.jpg",
+    "preparationTime": 0,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": [
+      "grab-and-go",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 201,
+    "name": "Espresso",
+    "category": "coffee",
+    "price": 4,
+    "description": "Single or double shot of our house blend.",
+    "image": "images/coffee/espresso.jpg",
+    "preparationTime": 3,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "coffee"
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Long Black",
+    "category": "coffee",
+    "price": 4.5,
+    "description": "Double espresso with hot water.",
+    "image": "images/coffee/long-black.jpg",
+    "preparationTime": 3,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "coffee"
+    ]
+  },
+  {
+    "id": 203,
+    "name": "Flat White",
+    "category": "coffee",
+    "price": 5,
+    "description": "Velvety microfoam over a double shot.",
+    "image": "images/coffee/flat-white.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "coffee"
+    ]
+  },
+  {
+    "id": 204,
+    "name": "Latte",
+    "category": "coffee",
+    "price": 5.2,
+    "description": "Smooth espresso with steamed milk.",
+    "image": "images/coffee/latte.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "coffee"
+    ]
+  },
+  {
+    "id": 205,
+    "name": "Cappuccino",
+    "category": "coffee",
+    "price": 5.2,
+    "description": "Equal parts espresso, steamed milk and foam.",
+    "image": "images/coffee/cappuccino.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "coffee"
+    ]
+  },
+  {
+    "id": 206,
+    "name": "Mocha",
+    "category": "coffee",
+    "price": 5.8,
+    "description": "Espresso, rich chocolate and steamed milk.",
+    "image": "images/coffee/mocha.jpg",
+    "preparationTime": 5,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "coffee"
+    ]
+  },
+  {
+    "id": 207,
+    "name": "Iced Coffee",
+    "category": "coffee",
+    "price": 6.5,
+    "description": "Chilled espresso, milk and ice. Optional cream.",
+    "image": "images/coffee/iced-coffee.jpg",
+    "preparationTime": 5,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "coffee"
+    ]
+  },
+  {
+    "id": 301,
+    "name": "English Breakfast",
+    "category": "tea",
+    "price": 4.5,
+    "description": "Classic full-bodied black tea.",
+    "image": "images/tea/english-breakfast.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegan"
+    ],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "tea"
+    ]
+  },
+  {
+    "id": 302,
+    "name": "Earl Grey",
+    "category": "tea",
+    "price": 4.5,
+    "description": "Bergamot-scented black tea.",
+    "image": "images/tea/earl-grey.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegan"
+    ],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "tea"
+    ]
+  },
+  {
+    "id": 303,
+    "name": "Green Tea",
+    "category": "tea",
+    "price": 4.5,
+    "description": "Light and refreshing green leaf tea.",
+    "image": "images/tea/green-tea.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegan"
+    ],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "tea"
+    ]
+  },
+  {
+    "id": 304,
+    "name": "Peppermint",
+    "category": "tea",
+    "price": 4.5,
+    "description": "Caffeine-free peppermint infusion.",
+    "image": "images/tea/peppermint.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegan"
+    ],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "tea"
+    ]
+  },
+  {
+    "id": 305,
+    "name": "Chai",
+    "category": "tea",
+    "price": 5.2,
+    "description": "Spiced black tea with steamed milk.",
+    "image": "images/tea/chai.jpg",
+    "preparationTime": 5,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "tea"
+    ]
+  },
+  {
+    "id": 306,
+    "name": "Chamomile",
+    "category": "tea",
+    "price": 4.5,
+    "description": "Calming caffeine-free herbal tea.",
+    "image": "images/tea/chamomile.jpg",
+    "preparationTime": 4,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegan"
+    ],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go",
+      "tea"
+    ]
+  },
+  {
+    "id": 401,
+    "name": "Coastal Big Breakfast",
+    "category": "breakfast",
+    "price": 24.9,
+    "description": "Free-range eggs, crispy bacon, roasted tomato, mushrooms, sourdough and hash brown.",
+    "image": "images/breakfast/coastal-big-breakfast.jpg",
+    "preparationTime": 18,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": true,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "house-favourite"
+    ]
+  },
+  {
+    "id": 402,
+    "name": "Eggs Benedict",
+    "category": "breakfast",
+    "price": 22.5,
+    "description": "Poached free-range eggs, toasted sourdough, leg ham, spinach and house hollandaise.",
+    "image": "images/breakfast/eggs-benedict.jpg",
+    "preparationTime": 16,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "house-favourite"
+    ]
+  },
+  {
+    "id": 403,
+    "name": "Smashed Avocado Sourdough",
+    "category": "breakfast",
+    "price": 19.9,
+    "description": "Ripe avocado, poached eggs, feta, herbs, chilli oil and lemon on thick sourdough.",
+    "image": "images/breakfast/smashed-avocado.jpg",
+    "preparationTime": 12,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 404,
+    "name": "Buttermilk Pancakes",
+    "category": "breakfast",
+    "price": 18.5,
+    "description": "Fluffy buttermilk pancakes, seasonal berries, whipped cream, maple syrup and toasted nuts.",
+    "image": "images/breakfast/buttermilk-pancakes.jpg",
+    "preparationTime": 15,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 405,
+    "name": "Breakfast Roll",
+    "category": "breakfast",
+    "price": 14.9,
+    "description": "Bacon, fried free-range egg, cheddar and house sauce on a toasted roll.",
+    "image": "images/breakfast/breakfast-roll.jpg",
+    "preparationTime": 10,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "grab-and-go"
+    ]
+  },
+  {
+    "id": 406,
+    "name": "Mushroom & Spinach Omelette",
+    "category": "breakfast",
+    "price": 20.5,
+    "description": "Three-egg omelette with field mushrooms, baby spinach, herbs and melted cheddar. Served with toast.",
+    "image": "images/breakfast/mushroom-omelette.jpg",
+    "preparationTime": 14,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 407,
+    "name": "Bircher Muesli",
+    "category": "breakfast",
+    "price": 15.9,
+    "description": "Overnight oats, apple, yoghurt, honey, toasted almonds and seasonal fruit.",
+    "image": "images/breakfast/bircher-muesli.jpg",
+    "preparationTime": 5,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 501,
+    "name": "Crispy Fish & Chips",
+    "category": "afternoon",
+    "price": 26.9,
+    "description": "Beer-battered local fish, thick-cut chips, garden salad and house tartare.",
+    "image": "images/afternoon/fish-and-chips.jpg",
+    "preparationTime": 20,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": true,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "house-favourite"
+    ]
+  },
+  {
+    "id": 502,
+    "name": "Coastal Chicken Burger",
+    "category": "afternoon",
+    "price": 22.9,
+    "description": "Crispy free-range chicken, lettuce, tomato, cheddar and house aioli on a soft bun. Served with chips.",
+    "image": "images/afternoon/chicken-burger.jpg",
+    "preparationTime": 18,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": [
+      "house-favourite"
+    ]
+  },
+  {
+    "id": 503,
+    "name": "Creamy Mushroom Pasta",
+    "category": "afternoon",
+    "price": 24.5,
+    "description": "Seasonal mushrooms, garlic, herbs, cream and parmesan tossed with fresh pasta.",
+    "image": "images/afternoon/mushroom-pasta.jpg",
+    "preparationTime": 16,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 504,
+    "name": "Grilled Chicken Salad",
+    "category": "afternoon",
+    "price": 23.5,
+    "description": "Grilled free-range chicken, mixed leaves, roasted vegetables, seeds and house dressing.",
+    "image": "images/afternoon/chicken-salad.jpg",
+    "preparationTime": 15,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "gluten-free"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 505,
+    "name": "Steak Sandwich",
+    "category": "afternoon",
+    "price": 25.9,
+    "description": "Grilled scotch fillet, caramelised onion, rocket, tomato and house sauce on toasted sourdough. Served with chips.",
+    "image": "images/afternoon/steak-sandwich.jpg",
+    "preparationTime": 18,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 506,
+    "name": "Wood-Fired Vegetable Pizza",
+    "category": "afternoon",
+    "price": 22,
+    "description": "Roasted seasonal vegetables, mozzarella, herbs and tomato sauce on a thin wood-fired base.",
+    "image": "images/afternoon/vegetable-pizza.jpg",
+    "preparationTime": 20,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 507,
+    "name": "Slow-Cooked Lamb Shoulder",
+    "category": "afternoon",
+    "price": 32,
+    "description": "Tender slow-cooked lamb, roasted seasonal vegetables, creamy mash and rosemary jus.",
+    "image": "images/afternoon/lamb-shoulder.jpg",
+    "preparationTime": 22,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": true,
+    "dietary": [
+      "gluten-free"
+    ],
+    "readyNow": false,
+    "tags": [
+      "house-favourite",
+      "this-week"
+    ]
+  },
+  {
+    "id": 508,
+    "name": "Caesar Salad",
+    "category": "afternoon",
+    "price": 19.9,
+    "description": "Cos lettuce, crispy bacon, soft egg, parmesan, croutons and classic Caesar dressing. Add chicken +$5.",
+    "image": "images/afternoon/caesar-salad.jpg",
+    "preparationTime": 12,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 601,
+    "name": "Lemon & Raspberry Cheesecake",
+    "category": "dessert",
+    "price": 12.9,
+    "description": "Creamy lemon cheesecake with a raspberry compote and biscuit base.",
+    "image": "images/desserts/lemon-raspberry-cheesecake.jpg",
+    "preparationTime": 5,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": []
+  },
+  {
+    "id": 602,
+    "name": "Warm Chocolate Brownie",
+    "category": "dessert",
+    "price": 11.5,
+    "description": "Rich chocolate brownie served warm with vanilla ice cream and chocolate sauce.",
+    "image": "images/desserts/chocolate-brownie.jpg",
+    "preparationTime": 8,
+    "available": true,
+    "featured": true,
+    "todaysSpecial": true,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": [
+      "house-favourite"
+    ]
+  },
+  {
+    "id": 603,
+    "name": "Sticky Date Pudding",
+    "category": "dessert",
+    "price": 13.5,
+    "description": "Classic sticky date pudding with butterscotch sauce and vanilla ice cream.",
+    "image": "images/desserts/sticky-date-pudding.jpg",
+    "preparationTime": 10,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": false,
+    "tags": []
+  },
+  {
+    "id": 604,
+    "name": "Seasonal Fruit Tart",
+    "category": "dessert",
+    "price": 12.5,
+    "description": "Buttery pastry shell filled with crème pâtissière and fresh seasonal fruit.",
+    "image": "images/desserts/fruit-tart.jpg",
+    "preparationTime": 5,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": []
+  },
+  {
+    "id": 605,
+    "name": "House Chocolate Cake",
+    "category": "dessert",
+    "price": 11.9,
+    "description": "Dense chocolate cake with ganache frosting. Served with cream.",
+    "image": "images/desserts/chocolate-cake.jpg",
+    "preparationTime": 5,
+    "available": true,
+    "featured": false,
+    "todaysSpecial": false,
+    "dietary": [
+      "vegetarian"
+    ],
+    "readyNow": true,
+    "tags": []
+  }
+]

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | The Coastal Table</title>
+  <meta name="description" content="The Coastal Table is a coastal café and restaurant in Swansea, Tasmania — fresh food, good coffee, made for every journey.">
+  <meta property="og:title" content="About | The Coastal Table">
+  <meta property="og:description" content="Fresh Food. Good Coffee. Made for Every Journey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">The Coastal <span>Table</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#specials">Today's Specials</a>
+        <a href="order.html">Order</a>
+        <a href="location.html">Location</a>
+        <a href="about.html" aria-current="page">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="order.html" class="btn-order-header">
+          Order Online
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="status-banner" id="status-banner">
+    <div class="container">
+      <p class="status-label" id="status-label">OPEN NOW</p>
+      <p class="status-detail" id="status-detail"></p>
+      <p class="current-service" id="current-service"></p>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>About The Coastal Table</h1>
+      <p>Fresh Food. Good Coffee. Made for Every Journey.</p>
+    </div>
+  </section>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="about-content">
+        <p>
+          The Coastal Table is a fictional café and restaurant created for this prototype project.
+          It represents a premium but welcoming Australian coastal café — the kind of place locals return to
+          and travellers are glad they stopped.
+        </p>
+        <p>
+          The experience is built around a simple journey: discover what’s available, order ahead if you like,
+          visit, pay at the counter, and collect. There is no online payment. Everything is designed so you
+          know whether we’re open, what’s on today, and what you can get quickly.
+        </p>
+
+        <h2>How ordering works</h2>
+        <ol style="padding-left:1.25rem;margin-bottom:1.5rem">
+          <li style="margin-bottom:0.5rem">Browse the menu and today’s specials</li>
+          <li style="margin-bottom:0.5rem">Add items to your order</li>
+          <li style="margin-bottom:0.5rem">Enter your name and mobile number</li>
+          <li style="margin-bottom:0.5rem">Place the order online</li>
+          <li style="margin-bottom:0.5rem">Come to the restaurant, pay at the counter, and collect</li>
+        </ol>
+
+        <h2>Service periods</h2>
+        <p>
+          The kitchen runs from 6:00 AM to 7:30 PM (Australia/Hobart). Breakfast is served from 9:00 AM to 12:00 PM.
+          The afternoon menu runs from 12:00 PM until close. Cabinet food, coffee and tea are available throughout
+          kitchen hours. Individual dish availability can differ from the featured service period.
+        </p>
+
+        <h2>This prototype</h2>
+        <p>
+          This website is a frontend prototype suitable for GitHub Pages. Orders are stored in your browser
+          (localStorage) for demonstration. Menu data, hours and specials are configured in JavaScript files
+          so they can be edited without touching the layout. Real photography can be dropped into the
+          <code>images/</code> folders when available.
+        </p>
+        <p>
+          Future versions can connect to a backend, kitchen display, inventory and notifications — the structure
+          is intentionally ready for that.
+        </p>
+
+        <p style="margin-top:2rem">
+          <a href="menu.html" class="btn btn-primary">View Menu</a>
+          <a href="order.html" class="btn btn-secondary" style="margin-left:0.5rem">Order Ahead</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>The Coastal Table</h3>
+          <p style="margin:0;font-size:0.95rem">Prototype restaurant website</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="location.html">Location</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Visit</h3>
+          <ul class="footer-links">
+            <li>Kitchen 6:00 AM – 7:30 PM</li>
+            <li>Swansea, Tasmania (fictional)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© The Coastal Table — Frontend prototype</span>
+        <span>No online payment · Pay at counter</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-order-bar" id="sticky-order-bar" role="button" tabindex="0" aria-label="View your order">
+    <span class="sticky-label">View order (<span class="sticky-count">0</span>)</span>
+    <span class="sticky-total">$0.00</span>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-loader.js"></script>
+  <script src="js/ordering.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

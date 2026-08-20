@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Online | The Coastal Table</title>
+  <meta name="description" content="Order ahead at The Coastal Table. Browse the menu, place your order online and pay at the counter when you collect.">
+  <meta property="og:title" content="Order Online | The Coastal Table">
+  <meta property="og:description" content="Order ahead — pay at the counter. No online payment required.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="order">
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">The Coastal <span>Table</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#specials">Today's Specials</a>
+        <a href="order.html" aria-current="page">Order</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="order.html" class="btn-order-header">
+          Order Online
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="status-banner" id="status-banner">
+    <div class="container">
+      <p class="status-label" id="status-label">OPEN NOW</p>
+      <p class="status-detail" id="status-detail"></p>
+      <p class="current-service" id="current-service"></p>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Your Order</h1>
+      <p>Review your items, add your details and place the order. Payment is at the counter when you collect.</p>
+    </div>
+  </section>
+
+  <main id="main" class="section">
+    <div class="container" style="max-width:640px">
+      <div id="order-confirmation" hidden></div>
+
+      <div id="order-cart-section">
+        <div id="cart-empty" class="empty-cart" hidden>
+          <p style="font-size:1.25rem;margin-bottom:0.5rem">Your order is empty</p>
+          <p>Browse the menu and add items to get started.</p>
+          <a href="menu.html" class="btn btn-primary" style="margin-top:1rem">View Menu</a>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div id="cart-summary" class="cart-summary-box" hidden>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Estimated preparation</span>
+            <span id="cart-prep">—</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total (pay at counter)</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <p class="form-hint" style="margin-top:0.75rem">No online payment. You pay when you collect your order at the restaurant counter.</p>
+
+          <form id="order-form" class="order-form-fields">
+            <div class="form-group">
+              <label for="customer-name">Your name <span aria-hidden="true">*</span></label>
+              <input type="text" id="customer-name" name="name" required autocomplete="name" placeholder="Name for the order">
+            </div>
+            <div class="form-group">
+              <label for="customer-mobile">Mobile number <span aria-hidden="true">*</span></label>
+              <input type="tel" id="customer-mobile" name="mobile" required autocomplete="tel" placeholder="04xx xxx xxx">
+              <p class="form-hint">So we can identify your order at the counter.</p>
+            </div>
+            <div class="form-group">
+              <label for="order-notes">Order notes (optional)</label>
+              <textarea id="order-notes" name="notes" rows="2" placeholder="Allergies, special requests…"></textarea>
+            </div>
+            <button type="submit" class="btn-place-order">PLACE ORDER — PAY AT COUNTER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>The Coastal Table</h3>
+          <p style="margin:0;font-size:0.95rem">Order ahead · Pay at counter · Collect in store</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-links">
+            <li><a href="tel:+61362578840">(03) 6257 8840</a></li>
+            <li>42 Marine Esplanade, Swansea TAS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© The Coastal Table — Prototype</span>
+        <span>No online payment</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-loader.js"></script>
+  <script src="js/ordering.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
