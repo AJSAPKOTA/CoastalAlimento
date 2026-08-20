@@ -520,7 +520,50 @@ const App = {
     document.getElementById("sticky-order-bar")?.addEventListener("click", () => {
       window.location.href = "order.html";
     });
+
+    // Google Reviews rolling cards + link
+    this.renderReviews();
   },
+
+  renderReviews() {
+    const track = document.getElementById("reviews-track");
+    const reviewsLink = document.getElementById("google-reviews-link");
+    if (reviewsLink && restaurantConfig.googleReviewsUrl) {
+      reviewsLink.href = restaurantConfig.googleReviewsUrl;
+    }
+    if (!track) return;
+
+    const all = Array.isArray(restaurantConfig.reviews) ? restaurantConfig.reviews : [];
+    // Only 5-star reviews
+    let list = all.filter(r => Number(r.rating) === 5);
+    if (!list.length) {
+      track.innerHTML = `<p class="reviews-empty">Add 5-star reviews in js/config.js → reviews array.</p>`;
+      return;
+    }
+
+    // Random order every page load
+    list = list
+      .map(r => ({ r, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(x => x.r);
+
+    const stars = () => "★★★★★";
+
+    const card = r => `
+      <article class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">${stars()}</div>
+        <p class="review-text">“${Ordering.escapeHtml(r.text || "")}”</p>
+        <div class="review-meta">
+          <span class="review-author">${Ordering.escapeHtml(r.author || "Guest")}</span>
+          ${r.date ? `<span class="review-date">${Ordering.escapeHtml(r.date)}</span>` : ""}
+        </div>
+        <span class="review-source">${r.date === "Tripadvisor" ? "Tripadvisor" : "Google"}</span>
+      </article>`;
+
+    // Duplicate for seamless CSS loop
+    track.innerHTML = list.map(card).join("") + list.map(card).join("");
+  },
+
 
 
   initOrderForm() {
